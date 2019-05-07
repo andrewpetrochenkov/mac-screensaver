@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage() {
+    echo "usage: $(basename $0)" 1>&2
+    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+}
+
+[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+
+[[ $# != 0 ]] && usage "$@"
+
+app="/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+[ -e "$app" ] && { /usr/bin/open -a "$app"; exit; }
+
+path="/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+! [ -e "$path" ] && echo "ERROR: $path NOT EXISTS" 1>&2 && exit 1
+
+tmp="$(mktemp).plist" || exit
+/usr/libexec/PlistBuddy \
+    -c "Add Label string 'ScreenSaver'" \
+    -c "Add Program string '$path'" \
+    -c "Add RunAtLoad bool true" "$tmp" 1> /dev/null || exit
+/bin/launchctl remove ScreenSaver 2> /dev/null
+/bin/launchctl load -w "$tmp"

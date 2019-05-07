@@ -1,0 +1,20 @@
+{
+  "name": "mac-screensaver",
+  "version": "2019.5.7",
+  "description": "macOS screensaver commands",
+  "keywords": [
+    "screensaver"
+  ],
+  "homepage": "https://github.com/looking-for-a-job/mac-screensaver",
+  "license": "Unlicense",
+  "bin": {
+    ".screensaver-name.applescript": "./scripts/.screensaver-name.applescript",
+    ".screensaver-names.applescript": "./scripts/.screensaver-names.applescript",
+    "screensaver": "./scripts/screensaver",
+    "screensaver-name": "./scripts/screensaver-name",
+    "screensaver-names": "./scripts/screensaver-names",
+    "screensaver-pid": "./scripts/screensaver-pid",
+    "screensaver-start": "./scripts/screensaver-start",
+    "screensaver-stop": "./scripts/screensaver-stop"
+  }
+}
