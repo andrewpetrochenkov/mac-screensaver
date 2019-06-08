@@ -1,6 +1,6 @@
 {
   "name": "mac-screensaver",
-  "version": "2019.5.7",
+  "version": "2019.5.26",
   "description": "macOS screensaver commands",
   "keywords": [
     "screensaver"
@@ -15,6 +15,7 @@
     "screensaver-names": "./scripts/screensaver-names",
     "screensaver-pid": "./scripts/screensaver-pid",
     "screensaver-start": "./scripts/screensaver-start",
-    "screensaver-stop": "./scripts/screensaver-stop"
+    "screensaver-stop": "./scripts/screensaver-stop",
+    "screensaver-wait": "./scripts/screensaver-wait"
   }
 }

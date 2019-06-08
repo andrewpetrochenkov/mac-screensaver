@@ -9,9 +9,10 @@ Available commands:
     start               start screensaver
     stop                stop screensaver
     pid                 print screensaver pid
+    wait                wait while screensaver is active
 
     name                print current screensaver name
-    name                print screensaver names
+    names                print screensaver names
 
 run \`$(basename $0) COMMAND --help\` for more infos
 EOF

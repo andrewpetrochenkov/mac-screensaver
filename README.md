@@ -26,6 +26,7 @@ command|`usage`
 `screensaver-pid` |`usage: screensaver-pid`
 `screensaver-start` |`usage: screensaver-start`
 `screensaver-stop` |`usage: screensaver-stop`
+`screensaver-wait` |`usage: screensaver-wait`
 
 #### Examples
 ```bash
@@ -48,6 +49,11 @@ Computer Name
 Shell
 FloatingMessage
 iLifeSlideshows
+```
+wait while screensaver is active
+```bash
+$ screensaver start
+$ screensaver wait
 ```
 
 <p align="center">
